@@ -7,8 +7,8 @@ export default function NewExpenseForm() {
   const [state, action] = useActionState(createExpenseAction, null);
 
   return (
-    <div className="w-1/3 ml-12">
-      <h3 className="text-xl font-bold">Add new</h3>
+    <div className="w-full md:w-1/3 md:ml-12 mt-8 md:mt-0">
+      <h3 className="text-xl md:text-2xl font-bold">Add new</h3>
       <form className="mt-3 flex flex-col gap-4" action={action}>
         <input
           type="text"
@@ -22,7 +22,10 @@ export default function NewExpenseForm() {
           placeholder="Amount"
           className="border border-zinc-300 p-2"
         />
-        <button type="submit" className="bg-purple-600 p-2 mb-4 text-white">
+        <button
+          type="submit"
+          className="bg-purple-600 p-2 mt-2 md:mt-4 text-white"
+        >
           Add
         </button>
       </form>
